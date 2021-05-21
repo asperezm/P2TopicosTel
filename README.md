@@ -13,6 +13,9 @@ Integrantes
 
 Instalación
 ------------------------------
+- [Descripción del proceso de instalación grupal](https://github.com/asperezm/P2TopicosTel/blob/main/INSTALACION_GRUPAL.md)
 
 Análisis y diseño
 ------------------------------
+### Arquitectura desplegada
+![Diagrama AWS](https://user-images.githubusercontent.com/47001432/119207508-15319900-ba64-11eb-9883-1a36ea939070.png)
