@@ -278,7 +278,7 @@ Para la creación del balanceador de carga accedemos a la sección `Load Balance
   * **Availability zones:**
     - **VPC:** Orgullo-VPC
     - **Availability Zones:**
-      > AZ-A: Public Subnet A
+      > AZ-A: Public Subnet A <br>
       > AZ-B: Public Subnet B
   * **Security group:** SG-WEB
   * **Target group:**
@@ -303,7 +303,7 @@ En la sección `Launch Configurations` se seleccionó la configuración de lanza
   * **Network:**
     - **Network:** Orgullo-VPC
     - **Subnet:**
-      > Private Subnet A
+      > Private Subnet A <br>
       > Private Subnet B
   * **Advanced options:**
     - Seleccionar `Attach to an existing load balancer`
