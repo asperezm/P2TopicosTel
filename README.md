@@ -3,13 +3,13 @@ P2 Tópicos especiales en Telemática
 Integrantes
 ------------------------------
 + Jhonatan Sebastián Acevedo Castrillón
-+ **Correo**: jsacevedoc@eafit.edu.co
++ _**`jsacevedoc@eafit.edu.co`**_
 
 - Andrew Santiago Pérez Martínez
-- Correo: asperezm@eafit.edu.co
+- _**`asperezm@eafit.edu.co`**_
 
 + Juan José Escudero Valencia
-+ Correo: jjescuderv@eafit.edu.co
++ _**`jjescuderv@eafit.edu.co`**_
 
 Instalación
 ------------------------------
