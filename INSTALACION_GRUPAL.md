@@ -323,6 +323,12 @@ En la sección `Launch Configurations` se seleccionó la configuración de lanza
 <br> <br>
 Configurando CloudFlare
 ================================
+Certificado Let's encrypt
+--------------------------
+Luego de obtener el [certificado](https://crt.sh/?q=orgullo2.ml), Cloudflare lo configura automáticamente.
+
+Configuración DNS
+--------------------------
 Luego de solicitar el dominio en [**Freenom**](https://www.freenom.com/) accedemos a Cloudflare para configurar el DNS con los siguientes registros: <br>
 ![image](https://user-images.githubusercontent.com/47001432/119207065-98ea8600-ba62-11eb-9359-d89b51df17b3.png)
 
