@@ -28,6 +28,7 @@ Creación de la VPC
   > **Name:** Orgullo-VPC <br>
   > **IPv4 CIDR:** 172.16.0.0
 
+<br>
 Creación de las subredes
 --------------------------------
 * En la sección `Subnets` se crearon 4 subredes con la siguiente configuración: <br>
@@ -39,10 +40,12 @@ Creación de las subredes
   > - Public subnet A: 172.16.2.0/24
   > - Public subnet B: 172.16.4.0/24
 
+<br>
 Creación de la Internet Gateway
 ---------------------------------
 * En la sección `Internet Gateways` se creó una nueva y se vinculó con nuestra **VPC** creada anteriormente.
 
+<br>
 Creación de las route tables
 --------------------------------
 En la sección `Route tables` se creó una tabla por cada subred: <br>
@@ -53,6 +56,7 @@ En la sección `Route tables` se creó una tabla por cada subred: <br>
   > **Destination:** 0.0.0.0/0 <br>
   > **Target:** La **Internet Gateway** creada anteriormente.
 
+<br>
 Creación de los grupos de seguridad
 ---------------------------------
 En la sección `Security Groups` se crearon 4 grupos de seguridad vinculados con nuestra **VPC** con las siguientes configuraciones de Inbound Rules:
@@ -91,6 +95,7 @@ Utilizando el servicio EFS
 ================================
 Con este servicio se crea el Elastic File System para tener alamacenamiento compartido entre las instancias del web server. <br>
 
+<br>
 Creación del EFS
 --------------------------------
 * En la sección `File systems` se hizo clic en `Create file system` con la siguiente configuración:
@@ -99,6 +104,7 @@ Creación del EFS
   > **Availability and Durability:** Regional <br>
 * En `Availability and Durability` se configura de forma regional para compartir el almacenamiento entre varias zonas de disponibilidad.
 
+<br>
 Configuración de los mount target
 --------------------------------
 * Una vez creado el EFS, entramos a su configuración y en la sección `Network` configuramos los siguientes puntos de montaje:
@@ -139,6 +145,7 @@ Utilizando el servicio EC2
 ================================
 Con este servicio se crean las diferentes instancias necesarias, como lo son los `Bastion Host`, las `NAT Instance` y el `Web Server`. Además, se crea el `Load Balancer` con su grupo de destino y el `Auto Scaling Group` con su configuración de lanzamiento. <br>
 
+<br>
 Creación de los Bastion Host
 --------------------------------
 Para la creación de cada Bastion Host, en la sección `Instances` se hizo clic en `Launch instances` y se configuró cada uno de la siguiente manera:
@@ -149,6 +156,7 @@ Para la creación de cada Bastion Host, en la sección `Instances` se hizo clic 
     - **Auto-assign public IP:** Enable (Dado que se encuentra en una subred pública)
   * En los grupos de seguridad se configuró `SG-Bastion`
  
+<br>
 Creación de las NAT Instance
 --------------------------------
 Para la creación de cada NAT Instance, en la sección `Instances` se hizo clic en `Launch instances` y se configuró cada una de la siguiente manera:
@@ -160,6 +168,7 @@ Para la creación de cada NAT Instance, en la sección `Instances` se hizo clic 
   * En los grupos de seguridad se configuró `SG-NAT-Instance`
   * Una vez creada la instancia se deshabilitó el `source/destination checking` para permitir que la instancia reciba y envíe tráfico sin problemas.
 
+<br>
 Creación del Web Server
 --------------------------------
 Para la creación del Web Server, en la sección `Instances` se hizo clic en `Launch instances` y se configuró de la siguiente manera:
@@ -170,6 +179,7 @@ Para la creación del Web Server, en la sección `Instances` se hizo clic en `La
     - **Auto-assign public IP:** Disable (Dado que se encuentra en una subred privada)
   * En los grupos de seguridad se configuró `SG-WEB`
 
+<br>
 Configuración del Web Server
 --------------------------------
 Luego de conectarnos haciendo `SSH` a través del `Bastion Host A` empezamos con la configuración. <br>
@@ -256,10 +266,12 @@ docker-compose up -d
 
 Una vez se ejecuta el `.yml` guardamos los archivos `.pem` que quedaron almacenados en `/etc/letsencrypt` y la instalación y montaje del Web Server terminó.
 
+<br>
 Creación de la AMI de nuestro Web Server
 -------------------------------
 Una vez el Web Server está montado se selecciona la instancia y haciendo clic en `Actions -> Image and templates -> Create image` creamos una AMI de nuestro Web Server para ser utilizado posteriormente en el `Auto Scaling Group`. <br>
 
+<br>
 Creación del balanceador de carga
 -------------------------------
 Para la creación del balanceador de carga accedemos a la sección `Load Balancers` y hacemos clic en `Create Load Balancer` para configurarlo de la siguiente manera: <br>
@@ -282,6 +294,7 @@ Para la creación del balanceador de carga accedemos a la sección `Load Balance
 
 Luego de estas configuraciones el balanceador de carga y el grupo de destino están listos.
 
+<br>
 Creación de la configuración de lanzamiento
 -------------------------------
 En la sección `Launch Configurations` se hizo clic en `Create Launch Configuration` con los siguientes parámetros: <br>
@@ -291,6 +304,7 @@ En la sección `Launch Configurations` se hizo clic en `Create Launch Configurat
   * **Security group:** SG-WEB
 Al crearla, esta es la configuración que va a utilizar el `Auto Scaling Group` en cada instancia del Web Server que lance. <br>
 
+<br>
 Creación del Auto Scaling Group
 -------------------------------
 En la sección `Launch Configurations` se seleccionó la configuración de lanzamiento creada anteriormente y en el menú `Actions` se seleccionó `Create Auto Scaling Group` y se configuró de la siguiente manera:
@@ -315,7 +329,24 @@ En la sección `Launch Configurations` se seleccionó la configuración de lanza
 
 
 
+<br> <br>
+Configurando CloudFlare
+================================
+Luego de solicitar el dominio en [**Freenom**](https://www.freenom.com/) accedemos a Cloudflare para configurar el DNS con los siguientes registros: <br>
+![image](https://user-images.githubusercontent.com/47001432/119207065-98ea8600-ba62-11eb-9359-d89b51df17b3.png)
 
+Se configura un registro `CNAME` para redirigir el tráfico al `Load balancer` creado en AWS. <br>
+Se configura un segundo registro `CNAME` para redirigir los accesos al dominio utilizando `www`.
+
+
+
+<br> <br>
+Configurando Freenom
+================================
+Una vez se configura [**CloudFlare**](https://www.cloudflare.com/) se accede al panel de freenom para configurar los nameservers que provee [**CloudFlare**](https://www.cloudflare.com/) <br>
+![image](https://user-images.githubusercontent.com/47001432/119207270-45c50300-ba63-11eb-8c8e-540a568a567f.png)
+
+Con esta configuración el tráfico es controlado por [**CloudFlare**](https://www.cloudflare.com/) mientras que [**Freenom**](https://www.freenom.com/) provee el dominio.
 
 
 
