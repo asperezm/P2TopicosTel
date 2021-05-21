@@ -10,3 +10,9 @@ Integrantes
 
 + Juan José Escudero Valencia
 + Correo: jjescuderv@eafit.edu.co
+
+Instalación
+------------------------------
+
+Análisis y diseño
+------------------------------
