@@ -43,7 +43,7 @@ Instalación de Docker Engine y Docker Compose
 --------------------------------
 Para instalar estas herramientas se hicieron los pasos especificados en los siguiente sitios web:
 
-[**Doceker-Engine**](https://docs.docker.com/engine/install/ubuntu/)
+[**Doceker-Engine**](https://docs.docker.com/engine/install/ubuntu/) <br>
 [**Docker-Compose**](https://docs.docker.com/compose/install/)
 
 
