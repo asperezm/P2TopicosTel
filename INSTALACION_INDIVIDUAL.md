@@ -15,6 +15,10 @@ Requisitos
 >   + Elastic IP
 > - Para obtener el dominio se utilizó [**Freenom**](https://www.freenom.com/).
 > - Para obtener el certificado se utilizó [**Let's Encrypt**](https://letsencrypt.org/) y [**Certbot**](https://certbot.eff.org/).
+> - Como servidor web se usó Nginx.
+> - Como base de datos se usó MySQL.
+> - Como CMS se usó Wordpress.
+> - Se usó Docker y Docker Compose para la ejecución e integración de los servicios antes mencionados.
 
 
 <br> <br>
