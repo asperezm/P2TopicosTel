@@ -1,3 +1,10 @@
+Sitios web de los integrantes del equipo:
+================================
+[**www.jhonargullo.ml**](https://www.jhonargullo.ml/)<br>
+[**www.andruorgullo.ml**](https://www.andruorgullo.ml/)<br>
+[**www.junajorgullo.ml**](https://www.juanjorgullo.ml/)<br>
+
+
 Documentación de la Instalación
 ================================
 
@@ -12,7 +19,7 @@ Requisitos
 
 <br> <br>
 
-Configuranción en Freenom
+Configuración en Freenom
 ================================
 Se accede al panel de freenom para configurar sus nameservers y que redirijan al dominio solicitado <br>
 ![image](https://user-images.githubusercontent.com/47001432/119207270-45c50300-ba63-11eb-8c8e-540a568a567f.png)
