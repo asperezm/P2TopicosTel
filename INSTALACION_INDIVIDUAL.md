@@ -22,7 +22,8 @@ Requisitos
 Configuración en Freenom
 ================================
 Se accede al panel de freenom para configurar sus nameservers y que redirijan al dominio solicitado <br>
-![image](https://user-images.githubusercontent.com/47001432/119207270-45c50300-ba63-11eb-8c8e-540a568a567f.png)
+![image](![xd](https://user-images.githubusercontent.com/47001381/119211350-2e901080-ba77-11eb-86dc-c160b36bdb25.png)
+
 
 
 
@@ -43,7 +44,7 @@ Instalación de Docker Engine y Docker Compose
 --------------------------------
 Para instalar estas herramientas se hicieron los pasos especificados en los siguiente sitios web:
 
-[**Doceker-Engine**](https://docs.docker.com/engine/install/ubuntu/) <br>
+[**Docker-Engine**](https://docs.docker.com/engine/install/ubuntu/) <br>
 [**Docker-Compose**](https://docs.docker.com/compose/install/)
 
 
