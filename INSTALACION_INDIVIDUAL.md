@@ -1,8 +1,8 @@
 Sitios web de los integrantes del equipo:
 ================================
-[**www.jhonargullo.ml**](https://www.jhonargullo.ml/) 'Jhonatan Acevedo' <br>
-[**www.andruorgullo.ml**](https://www.andruorgullo.ml/) 'Andrew Pérez'<br>
-[**www.junajorgullo.ml**](https://www.juanjorgullo.ml/) 'Juan Escudero' <br>
+Jhonatan Acevedo: [**www.jhonargullo.ml**](https://www.jhonargullo.ml/)  <br>
+Andrew Pérez: [**www.andruorgullo.ml**](https://www.andruorgullo.ml/) <br>
+Juan Escudero: [**www.junajorgullo.ml**](https://www.juanjorgullo.ml/)  <br>
 
 
 Documentación de la Instalación
