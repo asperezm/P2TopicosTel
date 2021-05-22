@@ -25,7 +25,7 @@ Requisitos
 
 Configuración en Freenom
 ================================
-Se accede al panel de freenom para configurar sus nameservers y que redirijan al dominio solicitado <br>
+Se accede al panel de freenom para configurar sus nameservers y que redirijan al dominio solicitado: <br><br>
 ![xd](https://user-images.githubusercontent.com/47001381/119211350-2e901080-ba77-11eb-86dc-c160b36bdb25.png)
 
 
