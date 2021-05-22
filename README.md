@@ -14,6 +14,7 @@ Integrantes
 Instalación
 ------------------------------
 - [Descripción del proceso de instalación grupal](https://github.com/asperezm/P2TopicosTel/blob/main/INSTALACION_GRUPAL.md)
+- [Descripción del proceso de instalación individual](https://github.com/asperezm/P2TopicosTel/blob/main/INSTALACION_INDIVIDUAL.md)
 
 Análisis y diseño
 ------------------------------
