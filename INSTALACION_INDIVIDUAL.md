@@ -33,12 +33,12 @@ Se accede al panel de freenom para configurar sus nameservers y que redirijan al
 
 Utilizando el servicio EC2
 ================================
-Con este servicio se crean la instancias necesaria para el servidor web donde se alojarán todas las dependencias para el sistema.
+Con este servicio se crean la instancias necesarias para el servidor web donde se alojarán todas las dependencias para el sistema.
 
 Creación del Web Server
 --------------------------------
 Para la creación del Web Server, en la sección `Instances` se hizo clic en `Launch instances` y se configuró de la siguiente manera:
-  * Como **AMI** se utilizó `Ubuntu Server 20.04 LTS (HVM)`.
+  * Como **EC2 INSTANCE** se utilizó `Ubuntu Server 20.04 LTS (HVM)`.
 
 Configuración del Web Server
 --------------------------------
