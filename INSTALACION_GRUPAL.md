@@ -286,7 +286,6 @@ Para la creación del balanceador de carga accedemos a la sección `Load Balance
 
 Luego de estas configuraciones el balanceador de carga y el grupo de destino están listos.
 
-<br>
 Creación de la configuración de lanzamiento
 -------------------------------
 En la sección `Launch Configurations` se hizo clic en `Create Launch Configuration` con los siguientes parámetros: <br>
