@@ -20,5 +20,5 @@ Análisis y diseño
 ------------------------------
 ### Arquitectura desplegada
 > [orgullo2.ml](https://orgullo2.ml/)
-<br>
+>
 ![Diagrama AWS](https://user-images.githubusercontent.com/47001432/119207508-15319900-ba64-11eb-9883-1a36ea939070.png)
